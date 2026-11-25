@@ -1,21 +1,29 @@
-# Moeez Sajjad Hashmi | Professional portfolio
+# Moeez Sajjad Hashmi — support portfolio
 
-A buildless portfolio for international technical support, CRM and entry-level AI automation opportunities. The site uses semantic HTML, CSS, local artwork and a downloadable PDF. There are no runtime scripts, tracking tools, API keys or package installs.
+React and JavaScript portfolio styled with Tailwind CSS and a dark cyan headset schematic. Node.js builds the production site and serves local previews. The single-page site pre-renders the CV content as HTML and hydrates the meeting example in the browser. Fonts, artwork and the public CV are served locally.
 
-## Preview
+## Run locally
 
-Open `dist/index.html` in a browser, or run `python -m http.server 8000 --directory dist` from this folder and visit http://localhost:8000.
+Use Node.js 22 or later. From the repository root:
 
-## Deploy on Cloudflare Pages Free
+```sh
+npm ci
+npm run build
+npm start
+```
 
-In Workers & Pages, create a **Pages** application, import this GitHub repository, and select **main** as the production branch. Choose **None** for the framework preset, **exit 0** for the build command and **dist** for the output directory. Leave the root directory and environment variables empty. Deploy to the included pages.dev address. Subsequent pushes to main trigger deployments.
+Open http://127.0.0.1:8000. The built site also opens directly from `dist/index.html`.
+
+## Free Cloudflare Pages deployment
+
+Create a Pages application and connect this repository. Select production branch `main`, framework preset **None**, build command `npm run build`, and output directory `dist`. Set `NODE_VERSION` to `22`. Keep the root directory empty. Deploy to the included pages.dev address.
 
 [Cloudflare static HTML guide](https://developers.cloudflare.com/pages/framework-guides/deploy-anything/)
 
 ## Maintain
 
-- Edit text, navigation, the page title, search description and Person structured data in `dist/index.html`. Styles are in `dist/style.css`.
-- Replace `dist/moeez-sajjad-cv.pdf` with a sanitized, selectable-text PDF when updating qualifications. Check the website and CV together. Keep the original CV outside the repository.
-- Employment and education follow the November 2026 ATS-friendly CV. The ADP final result and award are pending. CRM and entry-level AI automation are career interests. The final-year project is under development. Its workflow example is illustrative.
-- Project implementation details come from [Smart Meetings Notes Generator](https://github.com/MoeezSajjad/Smart-Meetings-Notes-Generator). The portfolio links to the source repository.
-- After edits, check narrow and wide layouts, keyboard focus, intro and footer navigation, all contact and project links, and the PDF download. If you later configure a permanent domain, use that URL for the canonical tag.
+- Edit profile content, links and the illustrative meeting interaction in `src/App.jsx`. The interaction switches between a sample transcript and its notes.
+- Edit Tailwind utilities in the components and typography, color tokens and responsive styling in `src/styles.css`. Page metadata and Person structured data are in `src/document.html`.
+- The source CV supplies roles, dates, skills and education. The degree award is pending. CRM and entry-level AI automation are career interests. [Smart Meetings Notes Generator](https://github.com/MoeezSajjad/Smart-Meetings-Notes-Generator) is under development.
+- Keep only the sanitized CV in `public/moeez-sajjad-cv.pdf`. The original headset artwork ships as WebP. Its optional Python/Pillow generator is `scripts/artwork.py`.
+- Run the build and commit the source, lockfile and updated `dist` together. Check layout at 320, 390, 768 and 1440 CSS pixels. Verify keyboard focus, anchors, contact and source links, both transcript/notes states and the PDF download.
