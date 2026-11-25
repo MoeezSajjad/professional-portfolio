@@ -24,6 +24,6 @@ Create a Pages application and connect this repository. Select production branch
 
 - Edit profile content, links and the illustrative meeting interaction in `src/App.jsx`. The interaction switches between a sample transcript and its notes.
 - Edit Tailwind utilities in the components and typography, color tokens and responsive styling in `src/styles.css`. Page metadata and Person structured data are in `src/document.html`.
-- The source CV supplies roles, dates, skills and education. The degree award is pending. CRM and entry-level AI automation are career interests. [Smart Meetings Notes Generator](https://github.com/MoeezSajjad/Smart-Meetings-Notes-Generator) is under development.
+- The source CV supplies roles, dates, skills and education. CRM and entry-level AI automation are career interests. [Smart Meetings Notes Generator](https://github.com/MoeezSajjad/Smart-Meetings-Notes-Generator) is under development.
 - Keep only the sanitized CV in `public/moeez-sajjad-cv.pdf`. The original headset artwork ships as WebP. Its optional Python/Pillow generator is `scripts/artwork.py`.
 - Run the build and commit the source, lockfile and updated `dist` together. Check layout at 320, 390, 768 and 1440 CSS pixels. Verify keyboard focus, anchors, contact and source links, both transcript/notes states and the PDF download.

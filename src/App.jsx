@@ -349,9 +349,6 @@ function Background() {
             Coursework covered front-end development, databases, programming
             fundamentals, object-oriented programming and data structures.
           </p>
-          <p className="degree-note">
-            Final result and degree award pending university processing.
-          </p>
         </div>
       </section>
     </>
