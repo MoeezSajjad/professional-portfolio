@@ -1,0 +1,17 @@
+name: Portfolio build
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: test -s dist/index.html && test -s dist/app.js && test -s dist/style.css
+      - run: grep -Fq 'https://moeezsajjad.github.io/Smart-Meetings-Notes-Generator/#/sample' dist/index.html
