@@ -25,6 +25,8 @@ import {
 const github = "https://github.com/MoeezSajjad";
 const linkedin = "https://www.linkedin.com/in/moeez-sajjad-hashmi-a05ab0253";
 const projectUrl = github + "/Smart-Meetings-Notes-Generator";
+const appUrl = "https://moeezsajjad.github.io/Smart-Meetings-Notes-Generator/";
+const demoUrl = appUrl + "#/sample";
 
 const experience = [
   [
@@ -258,7 +260,7 @@ function Project() {
         <div>
           <span className="status">
             <CircleDot size={13} />
-            Under development
+            Live demo available
           </span>
           <h2 className="display">
             Smart Meetings
@@ -274,16 +276,21 @@ function Project() {
             language model to pull out a summary, key points and action items.
           </p>
           <ul className="tags" aria-label="Project technologies">
-            {["React", "Tailwind CSS", "Node.js", "Express", "Groq"].map(
+            {["React", "Tailwind CSS", "Node.js", "Express", "Firebase", "Groq"].map(
               (x) => (
                 <li key={x}>{x}</li>
               ),
             )}
           </ul>
-          <a className="text-link" href={projectUrl}>
-            <Github size={17} />
-            View project source
-          </a>
+          <p>Explore a fictional meeting without signing in. Live recording uploads are limited to authorized accounts.</p>
+          <div className="flex flex-wrap gap-3">
+            <a className="button primary" href={demoUrl}>View public demo</a>
+            <a className="button secondary" href={appUrl}>Launch application</a>
+            <a className="text-link" href={projectUrl}>
+              <Github size={17} />
+              View project source
+            </a>
+          </div>
         </div>
         <NotePreview />
       </div>
